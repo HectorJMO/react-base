@@ -4,14 +4,15 @@ import {
 } from 'react-router-dom';
 
 function App() {
+  console.log(123);
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className='App'>
         <Switch>
-          <Route exact path="/">
+          <Route exact path='/'>
             <div>Hola Mundo..!</div>
           </Route>
-          <Redirect to="/" />
+          <Redirect to='/' />
         </Switch>
       </div>
     </BrowserRouter>
