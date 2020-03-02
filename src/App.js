@@ -1,22 +1,22 @@
 import React from 'react';
 import {
-  BrowserRouter, Route, Switch, Redirect,
+  Route, Switch, Redirect,
 } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function App() {
-  console.log(123);
-  return (
-    <BrowserRouter>
-      <div className='App'>
-        <Switch>
-          <Route exact path='/'>
-            <div>Hola Mundo..!</div>
-          </Route>
-          <Redirect to='/' />
-        </Switch>
-      </div>
-    </BrowserRouter>
-  );
-}
+import HomeContainer from './containers/home';
+
+const App = ({ location }) => (
+  <Switch location={location}>
+    <Route exact path='/'>
+      <HomeContainer />
+    </Route>
+    <Redirect to='/' />
+  </Switch>
+);
+
+App.propTypes = {
+  location: PropTypes.string.isRequired,
+};
 
 export default App;
