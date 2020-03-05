@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Button = styled(Link)`
-  padding: 25px;
+  padding-left: 25px;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
