@@ -9,7 +9,7 @@ import FavoriteContainer from './containers/favorite';
 import TeamContainer from './containers/equipos';
 import Confirm from './components/modales/confirmacion';
 import ModalCrear from './components/modales/crear';
-import Pokemodal from './components/modales/pokemodal';
+import PokemonProfile from './containers/pokemon';
 
 const App = ({ location }) => (
   <Switch location={location}>
@@ -23,7 +23,7 @@ const App = ({ location }) => (
       <TeamContainer />
     </Route>
     <Route exact path='/pokemon'>
-      <Pokemodal />
+      <PokemonProfile />
     </Route>
     <Route exact path='/confirm'>
       <Confirm />
