@@ -5,7 +5,8 @@ import {
 import PropTypes from 'prop-types';
 
 import HomeContainer from './containers/home';
-import FavoriteContainer from './containers/FavoriteContainer';
+import FavoriteContainer from './containers/favorite';
+import TeamContainer from './containers/equipos';
 
 const App = ({ location }) => (
   <Switch location={location}>
@@ -14,6 +15,9 @@ const App = ({ location }) => (
     </Route>
     <Route exact path='/favorite'>
       <FavoriteContainer />
+    </Route>
+    <Route exact path='/team'>
+      <TeamContainer />
     </Route>
     <Redirect to='/' />
   </Switch>

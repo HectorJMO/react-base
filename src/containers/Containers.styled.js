@@ -7,6 +7,8 @@ const Wrapper = styled.div`
   padding: 0;
   min-height: 100%;
   min-width: 100%;
+  font-size: 1.7em;
+  font-family: 'Lato', 'Arial', sans-serif;
 `;
 
 const SidebarStyled = styled.div`
