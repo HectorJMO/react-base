@@ -23,9 +23,9 @@ const LogoSpace = styled.div`
 `;
 
 const LogoImg = styled.img`
-  height: 100px;
+  height: 150px;
   border-radius: 50%;
-  margin: 20px auto 0 100px;
+  margin: 30px auto 40px 50px;
 `;
 
 const Sidebar = () => {

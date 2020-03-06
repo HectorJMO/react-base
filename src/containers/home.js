@@ -1,31 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {
+  Wrapper,
+  SidebarStyled,
+  BodyStyled,
+} from './Containers.styled';
 import Sidebar from '../components/sidebar/sidebar';
 import PokeCards from '../components/cards/index';
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-  min-height: 100%; 
-`;
-
-const SidebarStyled = styled.div`
-  flex: 1;
-  display: flex;
-  height: 100px;
-  max-width: 300px;
-`;
-
-const BodyStyled = styled.div`
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  padding-left: 5%;
-`;
 
 const CardWrapper = styled.div`
   width: 100%;
