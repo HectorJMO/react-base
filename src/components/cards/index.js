@@ -45,6 +45,7 @@ const Body = styled.div`
   flex: 3;
   padding: 10px;
   display: flex;
+  font-size: 0.5em;
 `;
 
 const PokeCards = () => (
@@ -55,8 +56,9 @@ const PokeCards = () => (
     </CardTitle>
     <Imagen />
     <Body>
-      Color: Amarillo
-      Tipo: Electrico
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Fusce ullamcorper ex lobortis pellentesque tincidunt. In
+    hac habitasse platea dictumst.
     </Body>
   </CardWrapper>
 );

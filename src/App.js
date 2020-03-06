@@ -7,6 +7,9 @@ import PropTypes from 'prop-types';
 import HomeContainer from './containers/home';
 import FavoriteContainer from './containers/favorite';
 import TeamContainer from './containers/equipos';
+import Confirm from './components/modales/confirmacion';
+import ModalCrear from './components/modales/crear';
+import Pokemodal from './components/modales/pokemodal';
 
 const App = ({ location }) => (
   <Switch location={location}>
@@ -18,6 +21,15 @@ const App = ({ location }) => (
     </Route>
     <Route exact path='/team'>
       <TeamContainer />
+    </Route>
+    <Route exact path='/pokemon'>
+      <Pokemodal />
+    </Route>
+    <Route exact path='/confirm'>
+      <Confirm />
+    </Route>
+    <Route exact path='/crear'>
+      <ModalCrear />
     </Route>
     <Redirect to='/' />
   </Switch>

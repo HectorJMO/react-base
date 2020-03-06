@@ -4,7 +4,7 @@ import {
   Wrapper,
   SidebarStyled,
   BodyStyled,
-} from './Containers.styled';
+} from './containers.styled';
 import Sidebar from '../components/sidebar/sidebar';
 
 const Namebar = styled.div`
