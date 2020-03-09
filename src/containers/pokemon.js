@@ -5,114 +5,84 @@ import {
   SidebarStyled,
   BodyStyled,
 } from './containers.styled';
-import Type from '../components/cards/tiposPokemon';
 import Sidebar from '../components/sidebar/sidebar';
-import Pokemomn from '../img/pikachu.png';
+import PokeCards from '../components/cards/index';
 
 const CardWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto auto auto 20px;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 2px #ccc;
-  width: 700px;
-  height: 900px;
-  background-color: #EAECEE;
-  font-family: 'Lato', 'Arial', sans-serif;
-`;
-
-const CardTitle = styled.div`
-  display: flex;
-  height: 10%;
-  background-color: #48C9B0;
-  text-align: center;
-  line-height: 90px;
-`;
-
-const Body = styled.div`
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.5em;
-  height: 60%;
-`;
-
-const Message = styled.label`
-  height: auto;
-  font-family: 'Lato', 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 1.8em;
-  margin: 0;
-  margin-left: 20px;
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  height: 350px;
-  width: 50%;
-`;
-
-const Image = styled.img`
-  width: 300px;
-  height: 300px;
-  margin: auto;
-`;
-
-const DescripcionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: auto;
-`;
-
-const Subtitle = styled.label`
-  margin: 25px 20px 0 10px;
-  font-size: 22px;
-  font-weight: bold;
-`;
-
-const Descripcion = styled.p`
-  margin: 10px 20px auto 10px;
-  font-size: 20px;
-`;
-
-const InfoExtra = styled.div`
-  display: flex;
   width: 100%;
-  height: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
-const PokemonProfile = () => (
+const Namebar = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  justify-content: flex-start;
+  margin: 30px 30px 30px auto;
+`;
+
+const Name = styled.input`
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  height: 20px;
+`;
+
+const Type = styled.div`
+  display: flex;
+  flex: 2;
+  width: 25px;
+`;
+
+const PokemonContainer = () => (
   <Wrapper>
     <SidebarStyled>
       <Sidebar />
     </SidebarStyled>
     <BodyStyled>
+      <Namebar>
+        <Name type='text' id='Pokename' size='50' placeholder='Nombre de un pokemon...' required />
+        <Type>
+          <select name='type' id='type'>
+            <option value='Acero' selected>Acero</option>
+            <option value='Agua'>Agua</option>
+            <option value='Insecto'>Insecto</option>
+            <option value='Dragon'>Dragon</option>
+            <option value='Eléctrico'>Eléctrico</option>
+            <option value='Fantasma'>Fantasma</option>
+            <option value='Fuego'>Fuego</option>
+            <option value='Hada'>Hada</option>
+            <option value='Hielo'>Hielo</option>
+            <option value='Lucha'>Lucha</option>
+            <option value='Normal'>Normal</option>
+            <option value='Planta'>Planta</option>
+            <option value='Psíquico'>Psíquico</option>
+            <option value='Roca'>Roca</option>
+            <option value='Oscuridad'>Oscuridad</option>
+            <option value='Tierra'>Tierra</option>
+            <option value='Veneno'>Veneno</option>
+            <option value='Volador'>Volador</option>
+            <option value='???'>???</option>
+          </select>
+        </Type>
+      </Namebar>
       <CardWrapper>
-        <CardTitle>
-          <Message>Pikachu</Message>
-        </CardTitle>
-        <Body>
-          <ImageWrapper>
-            <Image src={Pokemomn} alt='Pikachu' />
-          </ImageWrapper>
-          <DescripcionWrapper>
-            <Subtitle>Descripcion</Subtitle>
-            <Descripcion>
-              LLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tupis lorem, maximus v
-              el tellus quis, lacinia euismod quam. Suspendisse imperdiet feugat lectus eget ultrice
-              s. Aenean turpis tellus, tincidunt in fringila eget, luctus vitae diam. Phasellus semp
-              er massa felis, in faucibus ante malesuda eu. Interdum et malesuada fames ac ante ips.
-            </Descripcion>
-          </DescripcionWrapper>
-        </Body>
-        <InfoExtra>
-          <Type />
-        </InfoExtra>
+        <PokeCards />
+        <PokeCards />
+        <PokeCards />
+        <PokeCards />
+        <PokeCards />
+        <PokeCards />
+        <PokeCards />
+        <PokeCards />
+        <PokeCards />
+        <PokeCards />
       </CardWrapper>
     </BodyStyled>
   </Wrapper>
 );
 
-export default PokemonProfile;
+export default PokemonContainer;

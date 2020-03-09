@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Slider from 'infinite-react-carousel';
 import {
   Wrapper,
   SidebarStyled,
   BodyStyled,
 } from './containers.styled';
 import Sidebar from '../components/sidebar/sidebar';
+import Charizard from '../img/charizard.png';
 
 const Namebar = styled.div`
   display: flex;
@@ -34,12 +36,13 @@ const Title = styled.h2`
   margin-bottom: 50px;
 `;
 
-const Faltante = styled.div`
-  display: flex;
+const Image = styled.img`
+  max-height: 250px;
   width: auto;
-  height: 400px;
-  background-color: gray;
-  margin-right: 10%;
+`;
+
+const Carousel = styled.div`
+  margin: 10px 60px 10px 20px;
 `;
 
 const FavoriteContainer = () => (
@@ -53,7 +56,31 @@ const FavoriteContainer = () => (
       </Namebar>
       <FavoriteWrapper>
         <Title>Lista de favoritos:</Title>
-        <Faltante>Falta el carrusel</Faltante>
+        <Carousel>
+          <Slider dots>
+            <div>
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+            </div>
+            <div>
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+            </div>
+            <div>
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+              <Image src={Charizard} />
+            </div>
+          </Slider>
+        </Carousel>
       </FavoriteWrapper>
     </BodyStyled>
   </Wrapper>

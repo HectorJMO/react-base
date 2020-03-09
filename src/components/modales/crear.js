@@ -33,10 +33,16 @@ const CardTitle = styled.div`
   max-height: 70px;
 `;
 
+const AddButton = styled.input`
+  height: 25px;
+  width: 100%;
+`;
+
 const Body = styled.div`
   flex: 2;
   padding: 10px;
   display: flex;
+  flex-direction: column;
   font-size: 0.5em;
 `;
 
@@ -83,9 +89,10 @@ const ModalCrear = () => (
   <Blackout>
     <CardWrapper>
       <CardTitle>
-        <Message>Añadir a equipo</Message>
+        <Message>Agregar al equipo</Message>
       </CardTitle>
       <Body>
+        <AddButton type='button' value='Crear equipo' />
         <OptionsWrapper>
           <CheckboxWrapper>
             <input type='checkbox' id='Op1' name='Op1' />

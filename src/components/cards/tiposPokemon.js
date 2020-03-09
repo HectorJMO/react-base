@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TypeWrapper = styled.div`
-  height: 40px;
-  width: 120px;
+  height: 20px;
+  width: 60px;
   background-color: peru;
   text-align: center;
-  line-height: 40px;
-  font-size: 15px;
+  line-height: 20px;
+  font-size: 10px;
   border-radius: 15px;
+  margin: 5px;
 `;
 
 const Type = () => (

@@ -4,17 +4,21 @@ import {
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import HomeContainer from './containers/home';
+import DashboardContainer from './containers/dashboard';
+import PokemonContainer from './containers/pokemon';
 import FavoriteContainer from './containers/favorite';
 import TeamContainer from './containers/equipos';
 import Confirm from './components/modales/confirmacion';
 import ModalCrear from './components/modales/crear';
-import PokemonProfile from './containers/pokemon';
+import PokemonProfile from './containers/pokemonInd';
 
 const App = ({ location }) => (
   <Switch location={location}>
     <Route exact path='/'>
-      <HomeContainer />
+      <PokemonContainer />
+    </Route>
+    <Route exact path='/dashboard'>
+      <DashboardContainer />
     </Route>
     <Route exact path='/favorite'>
       <FavoriteContainer />
@@ -23,6 +27,9 @@ const App = ({ location }) => (
       <TeamContainer />
     </Route>
     <Route exact path='/pokemon'>
+      <PokemonContainer />
+    </Route>
+    <Route exact path='/pokemonInd'>
       <PokemonProfile />
     </Route>
     <Route exact path='/confirm'>

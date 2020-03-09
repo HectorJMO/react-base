@@ -6,6 +6,7 @@ import {
   BodyStyled,
 } from './containers.styled';
 import Sidebar from '../components/sidebar/sidebar';
+import Table from '../components/table/index';
 
 const Namebar = styled.div`
   display: flex;
@@ -15,14 +16,14 @@ const Namebar = styled.div`
   justify-content: flex-start;
   margin: 30px 30px 0 auto;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.4em;
 `;
 
 const FavoriteWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
 `;
 
 const Name = styled.h1`
@@ -30,15 +31,14 @@ const Name = styled.h1`
 `;
 
 const Title = styled.h2`
-  height: 25px;
-  margin-bottom: 50px;
+  height: auto;
+  margin: 20px 0 10px 0;
 `;
 
-const Faltante = styled.div`
+const TableWrapper = styled.div`
+  margin-top: 10px;
   display: flex;
   width: auto;
-  height: 400px;
-  background-color: gray;
   margin-right: 10%;
 `;
 
@@ -49,11 +49,13 @@ const TeamContainer = () => (
     </SidebarStyled>
     <BodyStyled>
       <Namebar>
-        <Name>Pepe Picapapas</Name>
+        <Name>SpaceshipLabs Team</Name>
       </Namebar>
       <FavoriteWrapper>
-        <Title>Equipos inscritos:</Title>
-        <Faltante>Falta listado</Faltante>
+        <Title>Integrantes:</Title>
+        <TableWrapper>
+          <Table />
+        </TableWrapper>
       </FavoriteWrapper>
     </BodyStyled>
   </Wrapper>
