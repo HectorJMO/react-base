@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   margin: 0;
   padding: 0;
-  min-height: 100%;
+  height: 100vh;
   min-width: 100%;
   font-size: 1.7em;
   font-family: 'Lato', 'Arial', sans-serif;
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const SidebarStyled = styled.div`
   flex: 1;
   display: flex;
-  height: 100px;
+  height: 100%;
   max-width: 300px;
 `;
 
@@ -22,7 +22,8 @@ const BodyStyled = styled.div`
   flex: 2;
   display: flex;
   flex-direction: column;
-  width: auto;
+  width: 100%;
+  min-height: 100%;
   padding-left: 5%;
 `;
 
