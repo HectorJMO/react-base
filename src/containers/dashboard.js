@@ -28,7 +28,7 @@ const FavoriteWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 60px 0;
   height: 20%;
 `;
 

@@ -1,13 +1,15 @@
 import React from 'react';
 import {
-  Route, Switch, Redirect,
+  Route,
+  Switch,
+  Redirect,
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import DashboardContainer from './containers/dashboard';
 import PokemonContainer from './containers/pokemon';
 import FavoriteContainer from './containers/favorite';
-import TeamContainer from './containers/equipos';
+import EquipmentContainer from './containers/equipment';
 import Confirm from './components/modales/confirmacion';
 import ModalCrear from './components/modales/crear';
 import PokemonProfile from './containers/pokemonInd';
@@ -23,8 +25,8 @@ const App = ({ location }) => (
     <Route exact path='/favorite'>
       <FavoriteContainer />
     </Route>
-    <Route exact path='/team'>
-      <TeamContainer />
+    <Route exact path='/equipment'>
+      <EquipmentContainer />
     </Route>
     <Route exact path='/pokemon'>
       <PokemonContainer />

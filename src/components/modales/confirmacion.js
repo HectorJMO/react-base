@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 const Blackout = styled.div`
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   justify-content: center;
   margin: 0;
   padding: 0;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import Logo from '../../img/logo.jpeg';
 import SidebarButton from './buttonSidebar';
 
@@ -31,18 +30,20 @@ const LogoImg = styled.img`
 const Sidebar = () => {
   const links = [
     { text: 'Dashboard', path: '/dashboard' },
-    { text: 'Pokemons', path: '/pokemons' },
-    { text: 'Equipos', path: '/equipos' },
-    { text: 'Favoritos', path: '/favoritos' },
+    { text: 'Pokemons', path: '/pokemon' },
+    { text: 'Equipos', path: '/equipment' },
+    { text: 'Favoritos', path: '/favorite' },
   ];
   return (
     <Sidenav>
       <LogoSpace>
-        <LogoImg src={Logo} alt='PokemonLabs' />
+        <a href='/'>
+          <LogoImg src={Logo} alt='PokemonLabs' />
+        </a>
       </LogoSpace>
       {
-        links.map(({ text }) => (
-          <SidebarButton path='/' text={text} key={text} />
+        links.map(({ text, path }) => (
+          <SidebarButton path={path} text={text} key={text} />
         ))
       }
     </Sidenav>

@@ -42,7 +42,7 @@ const TableWrapper = styled.div`
   margin-right: 10%;
 `;
 
-const TeamContainer = () => (
+const EquipmentContainer = () => (
   <Wrapper>
     <SidebarStyled>
       <Sidebar />
@@ -61,4 +61,4 @@ const TeamContainer = () => (
   </Wrapper>
 );
 
-export default TeamContainer;
+export default EquipmentContainer;
