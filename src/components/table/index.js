@@ -75,37 +75,37 @@ const Table = () => (
     </Header>
     <BlackRow>
       <Number>1</Number>
-      <Name>CountPaps13</Name>
+      <Name>Torneo</Name>
       <Choose type='button' value='o' />
       <Delete type='button' value='-' />
     </BlackRow>
     <WhiteRow>
       <Number>2</Number>
-      <Name>ChibakuTensei117</Name>
+      <Name>Práctica</Name>
       <Choose type='button' value='o' />
       <Delete type='button' value='-' />
     </WhiteRow>
     <BlackRow>
       <Number>3</Number>
-      <Name>DanteVizard</Name>
+      <Name>Aguascalientes</Name>
       <Choose type='button' value='o' />
       <Delete type='button' value='-' />
     </BlackRow>
     <WhiteRow>
       <Number>4</Number>
-      <Name>ZangetzuVizard</Name>
+      <Name>Equilibrado</Name>
       <Choose type='button' value='o' />
       <Delete type='button' value='-' />
     </WhiteRow>
     <BlackRow>
       <Number>5</Number>
-      <Name>MisukiVizard</Name>
+      <Name>Game of Thrones (Dragones)</Name>
       <Choose type='button' value='o' />
       <Delete type='button' value='-' />
     </BlackRow>
     <WhiteRow>
       <Number>6</Number>
-      <Name>ChibakuVizard</Name>
+      <Name>Común y corriente</Name>
       <Choose type='button' value='o' />
       <Delete type='button' value='-' />
     </WhiteRow>

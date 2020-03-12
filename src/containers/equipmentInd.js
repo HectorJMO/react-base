@@ -42,17 +42,17 @@ const TableWrapper = styled.div`
   margin-right: 10%;
 `;
 
-const EquipmentContainer = () => (
+const EquipmentProfile = () => (
   <Wrapper>
     <SidebarStyled>
       <Sidebar />
     </SidebarStyled>
     <BodyStyled>
       <Namebar>
-        <Name>EquipmentLab</Name>
+        <Name>Nombre del equipamento</Name>
       </Namebar>
       <FavoriteWrapper>
-        <Title>Lista de quipamentos:</Title>
+        <Title>Lista de Pokemons:</Title>
         <TableWrapper>
           <Table />
         </TableWrapper>
@@ -61,4 +61,4 @@ const EquipmentContainer = () => (
   </Wrapper>
 );
 
-export default EquipmentContainer;
+export default EquipmentProfile;
