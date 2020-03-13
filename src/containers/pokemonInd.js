@@ -9,85 +9,90 @@ import Type from '../components/cards/tiposPokemon';
 import Sidebar from '../components/sidebar/sidebar';
 import Pokemomn from '../img/pikachu.png';
 
-const CardWrapper = styled.div`
+const Name = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto auto auto 20px;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 2px #ccc;
-  width: 700px;
-  height: 900px;
-  background-color: #EAECEE;
-  font-family: 'Lato', 'Arial', sans-serif;
-`;
-
-const CardTitle = styled.div`
-  display: flex;
-  height: 10%;
-  background-color: #48C9B0;
-  text-align: center;
+  height: 15vh;
   line-height: 90px;
+  font-size: 1.2em;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
 `;
 
 const Body = styled.div`
-  padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  font-size: 0.5em;
-  height: 60%;
+  height: 70vh;
+  width: 100%;
 `;
 
 const Message = styled.label`
   height: auto;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 2.2em;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 10px;
 `;
 
 const ImageWrapper = styled.div`
   display: flex;
-  height: 350px;
-  width: 50%;
+  border-style: solid;
+  border-color: grey;
+  margin: 20px;
+  height: 60vh;
+  width: 500px;
 `;
 
 const Image = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: auto;
   margin: auto;
 `;
 
 const DescripcionWrapper = styled.div`
-  padding-top: 30px;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: 350px;
+  width:59%;
+  height: 35vh;
 `;
 
 const Subtitle = styled.label`
-  margin: 0 20px 10px 10px;
+  margin: 0 20px 0 10px;
   width: 100%;
-  font-size: 22px;
+  font-size: 32px;
   font-weight: bold;
 `;
 
 const Descripcion = styled.p`
   margin: 10px 20px auto 10px;
   font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  text-align: justify;
+  overflow: auto;
 `;
 
 const InfoExtra = styled.div`
+  display: flex;
   margin: 20px;
   padding: 20px;
   border-style: solid;
   border-color: gray;
   flex-direction: column;
+  width: 80%;
+  height: 35vh;
+`;
+
+const StatsWrapper = styled.div`
   display: flex;
-  width: auto;
-  height: 30%;
+  flex-direction: row;
+`;
+
+const StatsInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 48vh;
+  margin-right: 0.5vw;
 `;
 
 const PokemonProfile = () => (
@@ -96,29 +101,49 @@ const PokemonProfile = () => (
       <Sidebar />
     </SidebarStyled>
     <BodyStyled>
-      <CardWrapper>
-        <CardTitle>
-          <Message>Pikachu</Message>
-        </CardTitle>
-        <Body>
-          <ImageWrapper>
-            <Image src={Pokemomn} alt='Pikachu' />
-          </ImageWrapper>
-          <DescripcionWrapper>
-            <Subtitle>Descripcion</Subtitle>
-            <Descripcion>
-              LLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tupis lorem, maximus v
-              el tellus quis, lacinia euismod quam. Suspendisse imperdiet feugat lectus eget ultrice
-              s. Aenean turpis tellus, tincidunt in fringila eget, luctus vitae diam. Phasellus semp
-              er massa felis, in faucibus ante malesuda eu. Interdum et malesuada fames ac ante ips.
-            </Descripcion>
-          </DescripcionWrapper>
-        </Body>
-        <InfoExtra>
-          <Subtitle>Descripción de batalla:</Subtitle>
-          <Type />
-        </InfoExtra>
-      </CardWrapper>
+      <Body>
+        <ImageWrapper>
+          <Image src={Pokemomn} alt='Pikachu' />
+        </ImageWrapper>
+        <DescripcionWrapper>
+          <Name>
+            <Message>Pikachu</Message>
+          </Name>
+          <StatsWrapper>
+            <StatsInner>
+              <Subtitle>Descripcion</Subtitle>
+              <Descripcion>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tupis lorem, pr
+                aximus vel tellus quis, lacinia euismod quam. Suspendisse imperdiet feugat lec
+                tus eget ultrices. Aenean turpis tellus, tincidunt in fringila eget, luctus vi
+                tae diam. Phasellus semper massa felis, in faucibus ante malesuda eu. Interdur
+                m et malesuada fames ac ante ips.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tupis lorem, pr
+                aximus vel tellus quis, lacinia euismod quam. Suspendisse imperdiet feugat lec
+                tus eget ultrices. Aenean turpis tellus, tincidunt in fringila eget, luctus vi
+                tae diam. Phasellus semper massa felis, in faucibus ante malesuda eu. Interdur
+                m et malesuada fames ac ante ips.
+              </Descripcion>
+            </StatsInner>
+            <StatsInner>
+              <Subtitle>Stats:</Subtitle>
+              <Descripcion>
+                CP: 332
+                <br />
+                HP: 46
+                <br />
+                Altura: 1.05m
+                <br />
+                Peso: 27hg
+              </Descripcion>
+            </StatsInner>
+          </StatsWrapper>
+        </DescripcionWrapper>
+      </Body>
+      <InfoExtra>
+        <Subtitle>Descripción de batalla:</Subtitle>
+        <Type />
+      </InfoExtra>
     </BodyStyled>
   </Wrapper>
 );

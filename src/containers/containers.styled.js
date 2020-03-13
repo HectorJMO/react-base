@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   width: 100vw;
   font-size: 1.7em;
   font-family: 'Lato', 'Arial', sans-serif;
+  overflow: hidden;
 `;
 
 const SidebarStyled = styled.div`
@@ -24,7 +25,7 @@ const BodyStyled = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  padding-left: 5%;
+  padding-left: 5vw;
 `;
 
 export {

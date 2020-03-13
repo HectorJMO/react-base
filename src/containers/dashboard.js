@@ -4,7 +4,6 @@ import Slider from 'infinite-react-carousel';
 import {
   Wrapper,
   SidebarStyled,
-  BodyStyled,
 } from './containers.styled';
 import Sidebar from '../components/sidebar/sidebar';
 import Table from '../components/table/index';
@@ -30,6 +29,16 @@ const FavoriteWrapper = styled.div`
   width: 100%;
   margin: 20px 0 60px 0;
   height: 20%;
+`;
+
+const BodyStyled = styled.div`
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-left: 5vw;
+  overflow: auto;
 `;
 
 const Name = styled.h1`
@@ -64,6 +73,11 @@ const Image = styled.img`
 
 const CarouselWrapper = styled.div`
   width: 80%;
+`;
+
+const TableWrapper = styled.div`
+  width: 80%;
+  margin-bottom: 30px;
 `;
 
 const DashboardContainer = () => (
@@ -115,10 +129,10 @@ const DashboardContainer = () => (
           </div>
         </Slider>
       </CarouselWrapper>
-      <CarouselWrapper>
+      <TableWrapper>
         <Title>Miembro de estos equipos:</Title>
         <Table />
-      </CarouselWrapper>
+      </TableWrapper>
     </BodyStyled>
   </Wrapper>
 );

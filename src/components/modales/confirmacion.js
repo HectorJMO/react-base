@@ -40,6 +40,7 @@ const Body = styled.div`
   flex: 2;
   padding: 10px;
   display: flex;
+ justify-content: center;
   font-size: 0.5em;
 `;
 
@@ -49,15 +50,6 @@ const Message = styled.label`
   font-weight: bold;
   margin: auto;
   text-justify: center;
-`;
-
-const ButtonsContainer = styled.div`
-  flex: 3;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 5em;
 `;
 
 const ConfirmButton = styled.input`
@@ -75,10 +67,8 @@ const Confirm = () => (
         <Message>¿Estas seguro?</Message>
       </CardTitle>
       <Body>
-        <ButtonsContainer>
-          <ConfirmButton type='button' value='Si' />
-          <ConfirmButton type='button' value='Cancelar' />
-        </ButtonsContainer>
+        <ConfirmButton type='button' value='Si' />
+        <ConfirmButton type='button' value='Cancelar' />
       </Body>
     </CardWrapper>
   </Blackout>
