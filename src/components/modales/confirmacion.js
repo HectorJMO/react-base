@@ -60,18 +60,23 @@ const ConfirmButton = styled.input`
   margin: auto 10px auto 10px;
 `;
 
-const Confirm = () => (
-  <Blackout>
-    <CardWrapper>
-      <CardTitle>
-        <Message>¿Estas seguro?</Message>
-      </CardTitle>
-      <Body>
-        <ConfirmButton type='button' value='Si' />
-        <ConfirmButton type='button' value='Cancelar' />
-      </Body>
-    </CardWrapper>
-  </Blackout>
-);
+const Confirm = ({ children, show, setShow }) => {
+  const content = show && (
+    <Blackout>
+      <CardWrapper>
+        <CardTitle>
+          <Message>¿Estas seguro?</Message>
+        </CardTitle>
+        <Body>
+          <ConfirmButton type='button' value='Si' />
+          <ConfirmButton type='button' value='Cancelar' onClick={() => setShow(false)} />
+        </Body>
+        <div className='modal-body'>{children}</div>
+      </CardWrapper>
+    </Blackout>
+  );
+
+  return content;
+};
 
 export default Confirm;

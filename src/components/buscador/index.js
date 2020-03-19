@@ -25,7 +25,6 @@ class Buscador extends Component {
     super(props);
     this.state = {
       name: '',
-      type: '',
     };
 
     this.submitForm = this.submitForm.bind(this);
@@ -39,10 +38,7 @@ class Buscador extends Component {
 
   submitForm(e) {
     e.preventDefault();
-    const { name, type } = this.state;
-    // eslint-disable-next-line no-console
-    console.log('Name: ', name, ' Type: ', type);
-    this.setState({ name: '', type: '' });
+    this.setState({ name: '' });
   }
 
   render() {
@@ -53,24 +49,24 @@ class Buscador extends Component {
         <SearchBar type='text' name='name' size='50' value={name} onChange={this.handleChange} />
         <Type>
           <select name='type' id='type' onChange={this.handleChange}>
-            <option value='Acero'>Acero</option>
-            <option value='Agua'>Agua</option>
-            <option value='Insecto'>Insecto</option>
-            <option value='Dragon'>Dragon</option>
-            <option value='Eléctrico'>Eléctrico</option>
-            <option value='Fantasma'>Fantasma</option>
-            <option value='Fuego'>Fuego</option>
-            <option value='Hada'>Hada</option>
-            <option value='Hielo'>Hielo</option>
-            <option value='Lucha'>Lucha</option>
-            <option value='Normal'>Normal</option>
-            <option value='Planta'>Planta</option>
-            <option value='Psíquico'>Psíquico</option>
-            <option value='Roca'>Roca</option>
-            <option value='Oscuridad'>Oscuridad</option>
-            <option value='Tierra'>Tierra</option>
-            <option value='Veneno'>Veneno</option>
-            <option value='Volador'>Volador</option>
+            <option value='acero'>Acero</option>
+            <option value='agua'>Agua</option>
+            <option value='insecto'>Insecto</option>
+            <option value='dragon'>Dragon</option>
+            <option value='electrico'>Eléctrico</option>
+            <option value='fantasma'>Fantasma</option>
+            <option value='fuego'>Fuego</option>
+            <option value='hada'>Hada</option>
+            <option value='hielo'>Hielo</option>
+            <option value='lucha'>Lucha</option>
+            <option value='normal'>Normal</option>
+            <option value='planta'>Planta</option>
+            <option value='psiquico'>Psíquico</option>
+            <option value='roca'>Roca</option>
+            <option value='oscuridad'>Oscuridad</option>
+            <option value='tierra'>Tierra</option>
+            <option value='veneno'>Veneno</option>
+            <option value='volador'>Volador</option>
             <option value='???'>???</option>
           </select>
         </Type>

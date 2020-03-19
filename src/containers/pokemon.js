@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, Route, BrowserRouter } from 'react-router-dom';
 import {
   Wrapper,
   SidebarStyled,
@@ -8,9 +7,9 @@ import {
 } from './containers.styled';
 import Sidebar from '../components/sidebar/sidebar';
 import PokeCards from '../components/cards/index';
-import Confirm from '../components/modales/confirmacion';
 import Equipment from '../components/modales/crear';
 import Buscador from '../components/buscador/index';
+import Confirm from '../components/modales/confirmacion';
 
 const CardWrapper = styled.div`
   width: 100%;
@@ -39,41 +38,46 @@ const Modals = styled.div`
   align-items: center;
 `;
 
-const PokemonContainer = () => (
-  <Wrapper>
-    <SidebarStyled>
-      <Sidebar />
-    </SidebarStyled>
-    <BodyStyled>
-      <Namebar>
-        <Buscador />
-        <Modals>
-          <BrowserRouter>
-            <button type='button'>
-              <Link to='/equipment'>Crear Equipo</Link>
-              <Route path='/equipment' component={Equipment} />
-            </button>
-            <button type='button'>
-              <Link to='/confirm'>Confirmar</Link>
-              <Route path='/confirm' component={Confirm} />
-            </button>
-          </BrowserRouter>
-        </Modals>
-      </Namebar>
-      <CardWrapper>
-        <PokeCards />
-        <PokeCards />
-        <PokeCards />
-        <PokeCards />
-        <PokeCards />
-        <PokeCards />
-        <PokeCards />
-        <PokeCards />
-        <PokeCards />
-        <PokeCards />
-      </CardWrapper>
-    </BodyStyled>
-  </Wrapper>
-);
+const PokemonContainer = () => {
+  const [show, setShow] = React.useState(false);
+  return (
+    <Wrapper>
+      <SidebarStyled>
+        <Sidebar />
+      </SidebarStyled>
+      <BodyStyled>
+        <Namebar>
+          <Buscador />
+          <Modals>
+            <div>
+              <button type='button' onClick={() => setShow(true)}>
+                Equipment
+              </button>
+              <Equipment show={show} setShow={setShow} />
+            </div>
+            <div>
+              <button type='button' onClick={() => setShow(true)}>
+                Confirmacion
+              </button>
+              <Confirm show={show} setShow={setShow} />
+            </div>
+          </Modals>
+        </Namebar>
+        <CardWrapper>
+          <PokeCards />
+          <PokeCards />
+          <PokeCards />
+          <PokeCards />
+          <PokeCards />
+          <PokeCards />
+          <PokeCards />
+          <PokeCards />
+          <PokeCards />
+          <PokeCards />
+        </CardWrapper>
+      </BodyStyled>
+    </Wrapper>
+  );
+};
 
 export default PokemonContainer;

@@ -89,34 +89,39 @@ const ConfirmButton = styled.input`
   width: 100%;
 `;
 
-const ModalCrear = () => (
-  <Blackout>
-    <CardWrapper>
-      <CardTitle>
-        <Message>Agregar al equipo</Message>
-      </CardTitle>
-      <Body>
-        <AddButton type='button' value='Crear equipo' />
-        <OptionsWrapper>
-          <CheckboxWrapper>
-            <input type='checkbox' id='Op1' name='Op1' />
-            <label>Equipo Rocket</label>
-          </CheckboxWrapper>
-          <CheckboxWrapper>
-            <input type='checkbox' id='Op2' name='Op2' />
-            <label>Equipo del Caribe</label>
-          </CheckboxWrapper>
-          <CheckboxWrapper>
-            <input type='checkbox' id='Op3' name='Op3' />
-            <label>Linces</label>
-          </CheckboxWrapper>
-        </OptionsWrapper>
-      </Body>
-      <ButtonWrapper>
-        <ConfirmButton type='button' value='Aceptar' />
-      </ButtonWrapper>
-    </CardWrapper>
-  </Blackout>
-);
+const ModalCrear = ({ children, show, setShow }) => {
+  const content = show && (
+    <Blackout>
+      <CardWrapper>
+        <CardTitle>
+          <Message>Agregar al equipo</Message>
+        </CardTitle>
+        <Body>
+          <AddButton type='button' value='Crear equipo' />
+          <OptionsWrapper>
+            <CheckboxWrapper>
+              <input type='checkbox' id='Op1' name='Op1' />
+              <label>Equipo Rocket</label>
+            </CheckboxWrapper>
+            <CheckboxWrapper>
+              <input type='checkbox' id='Op2' name='Op2' />
+              <label>Equipo del Caribe</label>
+            </CheckboxWrapper>
+            <CheckboxWrapper>
+              <input type='checkbox' id='Op3' name='Op3' />
+              <label>Linces</label>
+            </CheckboxWrapper>
+          </OptionsWrapper>
+        </Body>
+        <div className='modal-body'>{children}</div>
+        <ButtonWrapper>
+          <ConfirmButton type='button' value='Aceptar' onClick={() => setShow(false)} />
+        </ButtonWrapper>
+      </CardWrapper>
+    </Blackout>
+  );
+
+  return content;
+};
 
 export default ModalCrear;
